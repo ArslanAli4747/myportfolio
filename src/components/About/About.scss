@@ -1,0 +1,199 @@
+.abot-page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 90%;
+    box-sizing: border-box;
+
+    
+    .stage-cube-cont {
+        position: absolute;
+       
+
+        right :8%;
+        top: 10%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+       
+    
+    }
+
+    .cubespinner {
+      
+        width: 100px;
+        height: 100px;
+        animation-name: spincube;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        transform-style: preserve-3d;
+        transform-origin: 50px 50px 0;
+       
+
+        div {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+            background: rgba(209, 165, 44, 0.7);
+            text-align: center;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 30px 0px rgb(189, 189, 177);
+        }
+
+        .face1 {
+            transform: translateZ(40px);
+            color: #dd0031;
+        }
+
+        .face2 {
+            transform: rotateY(90deg) translateZ(40px);
+            color: #f06529;
+        }
+
+        .face3 {
+            transform: rotateY(90deg) rotateX(90deg) translateZ(40px);
+            color: #28a4d9;
+        }
+
+        .face4 {
+            transform: rotateY(180deg) rotateZ(90deg) translateZ(40px);
+            color: #5ed4f4;
+        }
+
+        .face5 {
+            transform: rotateY(-90deg) rotateZ(90deg) translateZ(40px);
+            color: #efd81d;
+        }
+
+        .face6 {
+            transform: rotateX(-90deg) translateZ(40px);
+            color: #ec4d28;
+        }
+    }
+
+    @keyframes spincube {
+
+        from,
+        to {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        16% {
+            transform: rotateY(-90deg) rotateZ(90deg);
+        }
+
+        33% {
+            transform: rotateY(-90deg) rotateX(0deg);
+        }
+
+        50% {
+            transform: rotateY(-180deg) rotateZ(90deg);
+        }
+
+        66% {
+            transform: rotateY(-270deg) rotateX(90deg);
+        }
+
+        83% {
+            transform: rotateX(90deg);
+        }
+    }
+
+
+
+    .about-layout {
+
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: auto;
+        height: 100%;
+
+        .para-container {
+            margin-right: 15%;
+            box-sizing: border-box;
+            display: flex;
+            flex: 3;
+
+            .para {
+               padding: 0;
+                margin: 0;
+
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                p {
+                    box-sizing: border-box;
+                    font-family:'Courier New', Courier, monospace;
+                    font-size: 14px;
+                    line-height: 20px;
+                   
+                    font-weight: 600;
+                    color: rgb(197, 197, 185);
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    margin-left: 0;
+                    margin-right: 20px;
+
+                }
+
+            }
+
+            h2 {
+               
+                display: flex;
+                right: 0;
+                top: 0;
+                flex: 1;
+                height: 100%;
+                align-self: center;
+
+            }
+
+        }
+
+        h1 {
+
+            margin-top: 5%;
+            position: relative;
+            display: flex;
+            margin-left: 5%;
+            font-size: 30px;
+            align-items: center;
+            flex: 1;
+            font-family: 'Helvetica Neue';
+
+            &::before {
+                font-size: 20px;
+                font-family: 'La Belle Aurore';
+                position: absolute;
+                top: -30%;
+                left: -5%;
+                opacity: 0.6;
+                content: "<h1>";
+            }
+
+            &::after {
+                opacity: 0;
+                animation: bounceIn 1s 1s forwards;
+                font-size: 20px;
+                font-family: 'La Belle Aurore';
+                position: absolute;
+                
+                content: "<h1 />";
+                left: -20px;
+                bottom: -40%;
+
+            }
+        }
+    }
+
+}

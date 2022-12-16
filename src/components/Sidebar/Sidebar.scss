@@ -1,0 +1,186 @@
+.sidebar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 7%;
+    height: 80%;
+    transform: translateY(80% - 70%);
+    margin-left: 1%;
+    border-radius: 10px;
+    z-index: 4;
+    
+    box-shadow: 1px 1px 4px 0px #363634,
+    -1px -1px 4px 0px #363634,
+    -1px 1px 4px 0px #363634,
+    1px -1px 4px 0px #363634,;
+    .logo{
+        
+        align-self: center;
+        font-size: 60px;
+        flex: 1;
+        a{
+            display: flex;
+            margin-top: 30px;
+            color: whitesmoke;
+            text-shadow: 2px 2px 0px dodgerblue,
+            -2px -2px 0px dodgerblue,
+            2px -2px 0px dodgerblue,
+            -2px 2px 0px dodgerblue,
+            2px 0px 0px dodgerblue,
+            -2px 0px 0px dodgerblue,
+            0px 2px 0px dodgerblue,
+            0px -2px 0px dodgerblue,;
+            text-decoration: none;
+            font-family: 'La Belle Aurore';
+            transition: all 0.3s ease-out;
+
+            &:hover{
+                color: #ffd700;
+                text-shadow: 2px 2px 0px whitesmoke,
+                -2px -2px 0px whitesmoke,
+                2px -2px 0px whitesmoke,
+                -2px 2px 0px whitesmoke,
+                2px 0px 0px whitesmoke,
+                -2px 0px 0px whitesmoke,
+                0px 2px 0px whitesmoke,
+                0px -2px 0px whitesmoke,;
+            }
+        }
+    }
+    .menuitems{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+            width: 100%;
+            color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            margin-top: 30px;
+            text-decoration: none;
+            position: relative;
+            
+            &::after{
+                content: '';
+                font-size: 18px;
+                display: flex;
+                position: absolute;
+                font-family: 'La Belle Aurore';
+                font-weight: 700;
+                opacity: 0;
+               transition: all 0.3s ease-out;
+
+            }
+            
+            &:first-child{
+             &::after{
+                content: 'HOME';
+             }   
+            }
+            &:hover {
+                
+                color:#ffd700;
+                
+        
+                svg {
+                    opacity: 0;
+                }
+        
+                &:after {
+                  opacity: 1;
+                }
+              }
+            
+        }
+        a#color-active{
+            color: #ffd700;
+        }
+    
+        a.about-icon{
+            
+            &::after{
+                content: "ABOUT";
+            }
+        }
+        a.contact-icon{
+            &::after{
+                content: 'CONTACT';
+            }
+        }
+    }
+    .social{
+        flex: 1;
+        justify-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        a{
+            display: flex;
+            color: whitesmoke;
+            font-size: 20px;
+            margin-bottom: 30px;
+        &:hover{
+            color: #ffd700;
+        }
+        }
+
+
+    }
+}
+@media screen and (max-width:900px){
+    .sidebar{
+        width: 9%;
+        .logo{
+            font-size: 40px;
+        }
+    }
+    
+}
+
+@media screen and (max-width:600px){
+    .sidebar{
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%;
+        height: 12%;
+        bottom: 10px;
+        margin: 0;
+      
+        border-radius: 0px;
+       
+        flex-direction: row;
+        .logo{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 50px;
+            a{
+                margin-right: 30%;
+            }
+        }
+        .menuitems{
+            flex-direction: row;
+            flex: 1;
+            a{
+                position: relative;
+                margin: auto 10px;
+            }
+        }
+        .social{
+            flex: 1;
+            flex-direction: row;
+            margin-right: 10px;
+            a{
+                margin: auto 10px;
+                position: relative;
+            }
+        }
+    }
+    
+}
+

@@ -1,0 +1,35 @@
+.contact{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: absolute;
+    flex-direction: column;
+    top: 50%;
+    transform: translate(20%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    p{  
+        position:absolute;
+        bottom: -20px;
+        color: white;
+    }
+    form{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        input{
+            box-shadow: 2px 2px 3px 1px black;
+        }
+        textarea{
+            box-shadow: 2px 2px 3px 1px black;
+        }
+        .button{
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 1px black;
+        }
+    }
+}

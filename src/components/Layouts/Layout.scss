@@ -1,0 +1,49 @@
+.layout{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+
+    .tags{
+        box-sizing: border-box;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        color: #ffd700;
+        font-family: 'La Belle Aurore';
+        font-weight: 600;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        .body-open{
+            flex: 3;
+            margin-left: 14%;
+            margin-top: 4%;
+            .bopc{
+                opacity: 0.5;
+            }
+        }
+        .body-end{
+            flex: 1;
+            margin-left: 18%;
+            opacity: 0.5;
+            
+            .html-end{
+                margin-top: 10px;
+                margin-left: -40px;
+            }
+        }
+    }
+    
+ 
+}
+@media screen and (max-width:600px){
+ 
+    .layout{
+        .body-end{
+            margin-bottom: 10%;
+        }
+    }
+}
